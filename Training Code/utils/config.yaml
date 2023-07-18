@@ -11,21 +11,7 @@ MODEL_NAME: 'BERT'
 
 
 
-#---- DATASET
-# SPLITS: 3
-# FOLDS: 10
-# SEEDS: [11331] #, 11435, 12123, 53453, 42344, 24234, 65747, 84443, 29345, 99543]
-# VAL_SIZE: 0.1
-# FRAMES: 64
-# CHANNELS: 4
-# DATASET: 'openpose'
-# openpose:
-#     KEYPOINTS: 13
-# posenet:
-#     KEYPOINTS: 17
-# CLASSES: 31
-# LABELS: ['standing','check-watch','cross-arms','scratch-head','sit-down','get-up','turn-around','walking','wave1','boxing',
-#          'kicking','pointing','pick-up','bending','hands-clapping','wave2','jogging','jumping','pjump','running']
+
 
 
 ### Dataset
@@ -36,7 +22,7 @@ skeleton:
     pose: 'alphapose'
 
 rgb: 
-    backbone: 'resnet152'
+    backbone: 'resnet152' ## Extracted features used from pretrained resnet152
     
 
 fusion:
@@ -52,18 +38,9 @@ evalutaion: 'CD3'
 CO:
     CLASSES: 3
 
-CD1:
+CD1:  # Train on smarthome and tested on ETRI-ACTIVITY 3D
     CLASSES: 4
 
-CD2:
-    CLASSES: 4
-
-CD3:
-    CLASSES: 4
-
-
-CD4:
-    CLASSES: 4
 ### Saved Result Pickle
 
 Result_dire: 'Result'

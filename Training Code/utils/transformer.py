@@ -394,7 +394,7 @@ class Transformerfusion2layer(tf.keras.Model):
         return dec_output_rgb,dec_output_pose
 
 
-class Transformerfusion(tf.keras.layers.Layer):
+class Transformerfusion(tf.keras.layers.Layer): ## SSRT FUSION
     def __init__(self,*, num_layers, d_model, num_heads, dff,
                     rate=0.1):
         self.num_layers=num_layers

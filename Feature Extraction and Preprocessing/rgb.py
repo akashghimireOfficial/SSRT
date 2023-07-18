@@ -59,7 +59,8 @@ def get_json_dire(video_dire):
     return json_dire
 
 
-def get_bbox_info(json_dire):
+def get_bbox_info(json_dire): ## Getting BBOX from JSON
+
     with open(json_dire) as f:
         data=json.load(f)
 
@@ -88,7 +89,7 @@ def get_bbox_info(json_dire):
     return bbox_info
 
 
-def crop_img(frame,bbox,h_req,w_req):
+def crop_img(frame,bbox,h_req,w_req): ## Cropping Image from a video
     x,y,w,h=bbox
     
     

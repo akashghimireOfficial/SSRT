@@ -37,7 +37,7 @@ def random_flip(x):
 
 
 
-def rotate(x):
+def rotate(x):  
     anglesx=np.arange(15,360,15)
     anglex=(np.pi/180.0)*np.random.choice(anglesx)
     sinex=math.sin(anglex)

@@ -32,7 +32,7 @@ from utils.generator import FrameGenerator,PoseGenerator,Fusiongenerator,PoseGen
 from utils.resnet183d import resnet3d
 from utils.densenet import features_extraction_model
 from utils.transformer import TransformerEncoder, pos_encoding,MultiHeadAttention,TransformerDecoder,Transformerfusion
-#from utils.transformer_fus import Transformerfusion,TransformerEncoder
+#from utils.transformer_fus_old import Transformerfusion,TransformerEncoder # Do not use this ; user transformer.py
 
 from utils.data import  random_flip, random_noise, one_hot,aug,combine_inputs,uncombine_inputs
 
@@ -646,7 +646,7 @@ class Trainer:
 
       
 
-        self.dense = tf.keras.layers.Dense(d_model)
+     
 
 
     
