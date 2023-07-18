@@ -1,0 +1,35 @@
+
+RN_STD: 2.00e-02
+EPOCHS: 250
+WARMUP_PERC: 3.00e-01
+WEIGHT_DECAY: 1.00e-05
+
+LSTM:  Accuracy Test: 0.8821548821548821 
+
+
+RN_STD: 0.00e+00
+EPOCHS: 270
+WARMUP_PERC: 2.00e-01
+WEIGHT_DECAY: 1.00e-05
+
+LSTM:  Accuracy Test: 0.8686868686868687 
+
+
+RN_STD: 4.00e-02
+EPOCHS: 280
+WARMUP_PERC: 3.00e-01
+WEIGHT_DECAY: 1.00e-05
+
+LSTM:  Accuracy Test: 0.8484848484848485 
+
+Study statistics: 
+  Number of finished trials: 3
+  Number of pruned trials: 0
+  Number of complete trials: 3
+Best trial:
+  Value: 0.8821548821548821
+  Params: 
+    RN_STD: 0.02
+    WD: 1e-05
+    EPOCHS: 250.0
+    WARMUP_PERC: 0.30000000000000004

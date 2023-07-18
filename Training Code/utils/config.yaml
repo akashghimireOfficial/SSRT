@@ -1,0 +1,160 @@
+#---- GENERAL
+GPU: 0
+VERBOSE: True
+
+#---- PATHS
+MODEL_DIR: 'bin/'
+RESULTS_DIR: 'results/'
+LOG_DIR: 'logs/'
+MODEL_NAME: 'BERT'
+
+
+
+
+#---- DATASET
+# SPLITS: 3
+# FOLDS: 10
+# SEEDS: [11331] #, 11435, 12123, 53453, 42344, 24234, 65747, 84443, 29345, 99543]
+# VAL_SIZE: 0.1
+# FRAMES: 64
+# CHANNELS: 4
+# DATASET: 'openpose'
+# openpose:
+#     KEYPOINTS: 13
+# posenet:
+#     KEYPOINTS: 17
+# CLASSES: 31
+# LABELS: ['standing','check-watch','cross-arms','scratch-head','sit-down','get-up','turn-around','walking','wave1','boxing',
+#          'kicking','pointing','pick-up','bending','hands-clapping','wave2','jogging','jumping','pjump','running']
+
+
+### Dataset
+dataset: 'smarthome'
+features: 'fusion'
+skeleton:
+    
+    pose: 'alphapose'
+
+rgb: 
+    backbone: 'resnet152'
+    
+
+fusion:
+    pose: 'alphapose'
+
+    backbone: 'resnet152'
+
+
+    arch: 'SSR-BERT'
+
+evalutaion: 'CD3'
+
+CO:
+    CLASSES: 3
+
+CD1:
+    CLASSES: 4
+
+CD2:
+    CLASSES: 4
+
+CD3:
+    CLASSES: 4
+
+
+CD4:
+    CLASSES: 4
+### Saved Result Pickle
+
+Result_dire: 'Result'
+
+
+
+#---- AUGMENTATION
+FLIP_P: 0.5
+RN_STD: 0.03
+
+
+
+
+
+#---- MODEL
+PATCH_SIZE: 1
+MODEL_SIZE: 'no_lstm_X2'
+
+
+
+
+X1:    
+    N_HEADS: 96
+    N_LAYERS: 1
+    EMBED_DIM: 128
+    d_model: 256
+    DROPOUT: 0.125
+    MLP: 256
+
+X2:    
+    N_HEADS: 128
+    N_LAYERS: 1
+    EMBED_DIM: 128
+    d_model: 256
+    DROPOUT: 0.125
+    MLP: 256
+
+X3:    
+    N_HEADS: 256
+    N_LAYERS: 1
+    EMBED_DIM: 128
+    d_model: 256
+    DROPOUT: 0.125
+    MLP: 256
+
+LSTM:    
+    N_HEADS: 64
+    N_LAYERS: 1
+    EMBED_DIM: 128
+    d_model: 256
+    DROPOUT: 0.15
+    MLP: 256
+
+    
+
+no_lstm_X2:    
+    N_HEADS: 128
+    N_LAYERS: 1
+    EMBED_DIM: 128
+    d_model: 256
+    DROPOUT: 0.125
+    MLP: 256
+
+
+no_lstm_X1:    
+    N_HEADS: 96
+    N_LAYERS: 1
+    EMBED_DIM: 128
+    d_model: 256
+    DROPOUT: 0.125
+    MLP: 256
+
+
+
+
+
+
+
+
+
+
+
+
+
+#---- TRAINING SETTINGS 
+N_EPOCHS: 225
+BATCH_SIZE: 512
+WEIGHT_DECAY: 0.00001  
+WARMUP_PERC: 0.4  
+STEP_PERC: 0.8
+REG_FACTOR: 0.15                          
+
+#---- RANDOM SEARCH
+N_TRIALS: 25
