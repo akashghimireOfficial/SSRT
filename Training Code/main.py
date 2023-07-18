@@ -37,15 +37,11 @@ tf.config.experimental.set_memory_growth(gpus[config['GPU']], True)
 # SET TRAINER
 trainer = Trainer(config, logger)
 
-if args.benchmark:
-    # RUN BENCHMARK
-    trainer.do_benchmark()
 
-elif args.search:
+if args.search:
     # RUN RANDOM SEARCH
     trainer.do_random_search()
     
 else:
     print('Nothing to do! Specify one of the following arguments:')
-    print('\t --benchmark [-b]: run a benchmark')
-    print('\t --search [-s]: run a random search')
+ 
