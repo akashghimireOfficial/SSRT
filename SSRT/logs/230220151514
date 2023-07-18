@@ -1,0 +1,51 @@
+
+RN_STD: 5.00e-02
+EPOCHS: 270
+WARMUP_PERC: 4.00e-01
+WEIGHT_DECAY: 1.00e-05
+
+X1:  Accuracy Test: 0.6296296296296297 
+
+
+RN_STD: 1.00e-02
+EPOCHS: 230
+WARMUP_PERC: 2.00e-01
+WEIGHT_DECAY: 1.00e-05
+
+X1:  Accuracy Test: 0.32323232323232326 
+
+
+RN_STD: 1.00e-02
+EPOCHS: 250
+WARMUP_PERC: 2.00e-01
+WEIGHT_DECAY: 1.00e-05
+
+X1:  Accuracy Test: 0.3602693602693603 
+
+
+RN_STD: 2.00e-02
+EPOCHS: 270
+WARMUP_PERC: 4.00e-01
+WEIGHT_DECAY: 1.00e-05
+
+X1:  Accuracy Test: 0.7878787878787878 
+
+
+RN_STD: 1.00e-02
+EPOCHS: 220
+WARMUP_PERC: 3.00e-01
+WEIGHT_DECAY: 1.00e-05
+
+X1:  Accuracy Test: 0.5420875420875421 
+
+Study statistics: 
+  Number of finished trials: 5
+  Number of pruned trials: 0
+  Number of complete trials: 5
+Best trial:
+  Value: 0.7878787878787878
+  Params: 
+    RN_STD: 0.02
+    WD: 1e-05
+    EPOCHS: 270.0
+    WARMUP_PERC: 0.4
